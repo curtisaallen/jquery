@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="2.0">
+<bookstore>
+	<book>
+		<title lang="en">Pro jQuery</title>
+		<author>Adam Freeman</author>
+		<year>2005</year>
+		<price>30.00</price>
+	</book>
+	<book>
+		<title lang="en">Ruby on Rails Tutorial</title>
+		<author>Michael Hartl</author>
+		<year>2005</year>
+		<price>29.99</price>
+	</book>
+	<book>
+		<title lang="en">PHP and MySQL Web Development</title>
+		<author>Luke Welling</author>
+		<year>2003</year>
+		<price>49.99</price>
+	</book>
+	<book>
+		<title lang="en">concrete5 Beginner's Guide</title>
+		<author> Remo Laubacher </author>
+		<year>2003</year>
+		<price>39.95</price>
+	</book>
+	<book>
+		<title lang="en">Pro ASP.NET 4.5 in C#</title>
+		<author> Adam Freeman</author>
+		<year>2003</year>
+		<price>39.95</price>
+	</book>
+	<book>
+		<title lang="en">Head First Java</title>
+		<author> Kathy Sierra</author>
+		<year>2003</year>
+		<price>39.95</price>
+	</book>
+</bookstore>
+</rss>

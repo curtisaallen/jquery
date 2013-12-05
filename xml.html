@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Read XML file</title>
+<style type="text/css">
+#shots { margin:0 auto; width:800px;}
+#shots h1 { margin:0 40px;}
+#shots ul {list-style:none;}
+#shots ul li {  margin:0 10px 10px 0; width:200px; }
+#shots ul li img {width:100%;}
+#shots ul li h2 { font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#fff; text-align:center; text-transform:uppercase;}
+</style>
+</head>
+
+<body>
+<div id="shots">
+ <h1>favorite books</h1>
+ <ul id="list">
+ </ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+(function() {
+
+var feed = "feed.xml";
+$.ajax({
+	type: "GET",
+	url: feed,
+	dataType: "XML",
+	success: parseXML
+	});
+	
+	function parseXML(xml) {
+		console.log(xml);
+		
+		$(xml).find('book').each(function() {
+			var title = $(this).find('title').text(),
+			    author = $(this).find('author').text();
+			$('<li></li>').html("<b>" + title + "</b> <br />" + author).appendTo('#list');
+		});
+	}
+	
+ 
+})();
+
+</script>
+</body>
+</html>
